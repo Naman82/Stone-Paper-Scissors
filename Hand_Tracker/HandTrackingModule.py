@@ -37,7 +37,6 @@ class HandDetector():
                     print(id, cx, cy)
 
                 self.mpDraw.draw_landmarks(img, handLms, self.mpHands.HAND_CONNECTIONS)
-            # return results
 
     def collect_landmarks(self, category_of_sample = None, save_file_name:str = "Landmarks.csv", num_samples:int = 1000):
         cap = cv2.VideoCapture(0)
@@ -64,7 +63,6 @@ class HandDetector():
                         lm_dict[f"{id}_x"] = Lm.x
                         lm_dict[f"{id}_y"] = Lm.y
                     lm_dict['Category'] = category_of_sample
-                    # print(lm_dict)
 
                     self.mpDraw.draw_landmarks(img, handLms, self.mpHands.HAND_CONNECTIONS)
                     lms = lms.append(lm_dict, ignore_index=True)
@@ -86,9 +84,6 @@ class HandDetector():
                 for id, Lm in enumerate(handLms.landmark):
                     lm_dict[f"{id}_x"] = Lm.x
                     lm_dict[f"{id}_y"] = Lm.y
-                    # print(lm_dict)
-
-                #self.mpDraw.draw_landmarks(img, handLms, self.mpHands.HAND_CONNECTIONS)
                 lms = pd.Series(lm_dict)
                 lms = lms.to_numpy()
                 lms = np.expand_dims(lms, axis = 0)
@@ -125,10 +120,6 @@ class HandDetector():
                     predicted_as_dict['Scissor'] = 1
                 elif(pred == 0):
                     predicted_as_dict['Paper'] = 1
-
-        # print(predicted_as_dict)
-        # print(prediction_arr)
-
         return predicted_as_dict
 
 
