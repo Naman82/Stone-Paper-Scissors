@@ -9,7 +9,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["sps-plays.herokuapp.com", "*"]
+ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
