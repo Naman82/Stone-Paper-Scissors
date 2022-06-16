@@ -1,0 +1,1 @@
+web: sh -c 'cd ./game/ && exec gunicorn game.wsgi --log-file -'
