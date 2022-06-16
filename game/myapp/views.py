@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import JsonResponse, StreamingHttpResponse
 from myapp.camera import VideoCamera
 import json
-# Create your views here.
 
 vid_cam = VideoCamera()
 def index(request):
@@ -29,15 +28,13 @@ def gen(camera):
 
         yield((b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n'))
-        # return render(request, 'single_player.html', {'js_data': js_data})
+        
 
 def get_result(request):
     js_data = None
     while True:
         predicted_dict = vid_cam.get_result()
         js_data = json.dumps(predicted_dict)
-        # print(js_data)
-        # return render(request, 'single_player.html', {'js_data': js_data})
         return JsonResponse({'js_data':js_data})
 
 def video_feed(request):

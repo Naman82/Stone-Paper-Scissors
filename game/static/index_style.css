@@ -1,4 +1,3 @@
-
 body{
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
@@ -11,16 +10,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /* background: url("./images/stone_paper_scissors_logo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
-    /* opacity: 0.4; */
 }
 
 .intro-of-game{
     width: 60%;
-    /* height: 90%; */
     padding: 10% 4%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -39,28 +32,6 @@ body{
     align-items: center;
     padding-left: 30px;
 }
-
-/* 
-.nav-opts{
-    display: flex;
-    justify-content: end;
-}
-
-.bg-light-pink{
-    background-color: #ecb5b5;
-}
-
-
-@media screen and (max-width: 991px)
-{
-    .nav-opts{
-        justify-content: start;
-    }
-}
-
-.sps-logo{
-    height: 50px;
-} */
 
 @media screen and (max-width: 991px)
 {
