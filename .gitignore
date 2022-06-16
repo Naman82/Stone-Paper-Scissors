@@ -1,3 +1,4 @@
 env
 game/db.sqlite3
 game/.env
+Procfile
