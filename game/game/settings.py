@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
